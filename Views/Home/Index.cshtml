@@ -1,0 +1,137 @@
+﻿<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title style="font-size: 56px">HTML Mansion</title>
+    <style>
+        header nav button:hover {
+            text-decoration: underline;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        .menu h1 {
+            font-size: 64px;
+            margin-bottom: 30px;
+            color: #ffffff;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .menu button {
+            padding: 20px 40px;
+            margin: 20px 0;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            background-color: #16213e;
+            border: 2px solid #0f3460;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .menu button:hover {
+            background-color: #0f3460;
+            transform: scale(1.05);
+        }
+
+        canvas {
+            display: none;
+            margin: auto;
+        }
+
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            margin: 0;
+        }
+
+        .feedback {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+        .feedback:hover {
+            color: #ffd700;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+<div class="menu" style="padding-top: 10%">
+    <h1>HTML Mansion</h1>
+    <button id="startGame">Play Game</button>
+    <a class="feedback" asp-area="" asp-controller="Feedback" asp-action="LeaveFeedback">Leave feedback</a>
+</div>
+
+<div style="display: flex; justify-content: center; width: 100%; margin: 0;">
+    <!-- Canvas for the game -->
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div class="keybind-text" id="keybinds">Press E to interact and WASD to move around</div>
+</div>
+
+<!-- Task system UI -->
+<div id="task-container">
+    <h2 id="task-title"></h2>
+    <p id="task-description"></p>
+    <textarea id="task-input" rows="4" cols="50" placeholder="Write your HTML here..."></textarea>
+    <p id="task-hint1"></p>
+    <p id="task-hint2"></p>
+    <br>
+    <button id="submit-task">&lt;button&gt;Submit&lt;/button&gt;</button>
+    <button id="cancel-task">&lt;button&gt;Cancel&lt;/button&gt;</button>
+    <p id="task-feedback"></p>
+</div>
+
+<!-- Dracula interaction system UI -->
+<div id="dracula-container">
+    <h2 id="dracula-title"></h2>
+    <p id="dracula-message"></p>
+    <button id="dracula-button">&lt;button&gt;Ok&lt;/button&gt;</button>
+</div>
+
+<div id="name-popup-container" style="display: none;">
+    <div id="name-popup-title">&lt;h1&gt;Enter your name:&lt;h1&gt;</div>
+    <input type="text" id="name-popup-input" placeholder="Your name here">
+    <div id="name-popup-buttons">
+        <button id="name-popup-submit">&lt;button&gt;Submit&lt;/button&gt;</button>
+        <button id="name-popup-cancel">&lt;button&gt;Cancel&lt;/button&gt;</button>
+    </div>
+</div>
+
+<!-- changeSkin interaction system UI -->
+<div id="changeSkin-container">
+    <h2 id="changeSkin-title"></h2>
+    <button id="standard-button">Standard</button>
+    <button id="red-button">Red Shirt</button>
+    <button id="crown-button">Crown</button>
+</div>
+
+<div id="notification-container">
+    <p id="notification-message"></p>
+    <button id="notification-button">Ok</button>
+</div>
+
+<!-- Game and Task Scripts -->
+<script src="js/tasks.js"></script>
+<script src="~/js/pauseMenu.js" asp-append-version="true"></script>
+<script type="module" src="js/index.js"></script>
+
+</body>

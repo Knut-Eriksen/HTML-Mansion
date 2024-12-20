@@ -1,0 +1,8 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form asp-area="" asp-controller="Feedback" asp-action="ViewFeedback" method="get">
+    <button type="submit" class="btn btn-primary">View Feedback</button>
+</form>

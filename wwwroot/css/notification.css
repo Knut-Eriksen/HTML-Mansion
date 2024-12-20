@@ -1,0 +1,41 @@
+
+#notification-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 140px;
+    background-color: #222;
+    border: 3px solid #880015;
+    border-radius: 8px;
+    padding: 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    z-index: 9;
+}
+
+
+#notification-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+#notification-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #880015;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+#notification-button:hover {
+    background-color: #a4001a;
+}
+

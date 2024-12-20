@@ -1,0 +1,90 @@
+
+#dracula-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background-color: #222;
+    border: 3px solid #880015;
+    border-radius: 8px;
+    padding: 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    z-index: 9;
+}
+
+
+#dracula-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+#dracula-message {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+#dracula-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #880015;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+#dracula-button:hover {
+    background-color: #a4001a;
+}
+
+
+#name-popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #222;
+    border: 3px solid #880015;
+    border-radius: 8px;
+    padding: 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    z-index: 1000;
+}
+
+#name-popup-input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+    border: 1px solid #880015;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+}
+
+#name-popup-submit,
+#name-popup-cancel {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #880015;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#name-popup-submit,
+#name-popup-cancel:hover {
+    background-color: #a4001a;
+}

@@ -1,0 +1,25 @@
+@model IEnumerable<html_mansion.Models.Feedback>
+
+@{
+    ViewData["Title"] = "View Feedback";
+}
+
+<h1>Feedback Submissions</h1>
+
+<table style="color: white;" class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Message</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var feedback in Model)
+    {
+        <tr>
+            <td>@feedback.Id</td>
+            <td>@feedback.Message</td>
+        </tr>
+    }
+    </tbody>
+</table>

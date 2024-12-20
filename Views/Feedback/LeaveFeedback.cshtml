@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Leave Feedback";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post" action="/Feedback/PostFeedback">
+    <div>
+        <label for="message">Your Feedback:</label><br>
+        <textarea id="message" name="message" rows="10" cols="50" placeholder="Type your feedback here..."></textarea>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>

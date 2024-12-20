@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\html-mansion.props" />
+</Project>
